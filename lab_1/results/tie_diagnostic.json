@@ -1,0 +1,22 @@
+{
+  "task": "regression",
+  "dataset": "Concrete Compressive Strength",
+  "stage": "improved",
+  "different_predictions_above_1e_8": 1,
+  "n_test": 206,
+  "diagnostics": [
+    {
+      "test_position": 5,
+      "original_row_id": 60,
+      "sklearn_prediction": 53.60510128395166,
+      "custom_prediction": 52.98219035439818,
+      "sklearn_only_squared_distances": [
+        0.45680277270159825
+      ],
+      "custom_only_squared_distances": [
+        0.45680277270159814
+      ],
+      "explanation": "Numerical rounding at equal-distance k boundary; sklearn result can depend on query batching."
+    }
+  ]
+}

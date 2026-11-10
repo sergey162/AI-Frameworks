@@ -1,0 +1,20 @@
+{
+  "classification": {
+    "mode": "log",
+    "params": {
+      "model__n_neighbors": 15,
+      "model__p": 1,
+      "model__weights": "distance"
+    },
+    "cv_score": 0.6914677878097462
+  },
+  "regression": {
+    "mode": "engineered",
+    "params": {
+      "model__n_neighbors": 5,
+      "model__p": 2,
+      "model__weights": "distance"
+    },
+    "cv_score": -4.5027404039477075
+  }
+}

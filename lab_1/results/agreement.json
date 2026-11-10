@@ -1,0 +1,10 @@
+{
+  "classification": {
+    "baseline": 0.0,
+    "improved": 0.0
+  },
+  "regression": {
+    "baseline": 1.0347709744079128e-15,
+    "improved": 0.0030238394639647533
+  }
+}

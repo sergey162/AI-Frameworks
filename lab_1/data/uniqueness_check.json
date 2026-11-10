@@ -1,0 +1,35 @@
+{
+  "checked_on": "2026-11-10",
+  "source": "https://docs.google.com/spreadsheets/d/1szg1vYr3MLq8eqCejGbvVOdF7t87slb3h2x8qv2e-So/edit?gid=0",
+  "gid": 0,
+  "student_records_checked": 20,
+  "own_record_number": 20,
+  "own_record_confirmed_by_user": true,
+  "checked_both_dataset_columns": true,
+  "source_csv_sha256": "1971b97977fc3e19e8fbd8baffdde187b8bf43615bb4008ea4299e6b40f484cd",
+  "occupied_by_other_students": [
+    "Chess (King-Rook vs. King-Pawn) - https://archive.ics.uci.edu/dataset/22/chess+king+rook+vs+king+pawn",
+    "Dota2 Games Results - https://archive.ics.uci.edu/dataset/367/dota2+games+results",
+    "Forest Fires (UCI) https://archive.ics.uci.edu/dataset/162/forest+fires",
+    "Mushroom (UCI) https://archive.ics.uci.edu/dataset/73/mushroom",
+    "Parkinsons Telemonitoring (UCI) https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring",
+    "SML2010, UCI - https://archive.ics.uci.edu/dataset/274/sml2010",
+    "Spambase, UCI - https://archive.ics.uci.edu/dataset/94/spambase",
+    "Wine (UCI) https://archive.ics.uci.edu/dataset/109/wine"
+  ],
+  "selected": {
+    "classification": {
+      "name": "Loan Approval Classification Data",
+      "url": "https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data",
+      "present_in_own_record": true,
+      "conflicts_with_other_records": []
+    },
+    "regression": {
+      "name": "Concrete Compressive Strength",
+      "url": "https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength",
+      "present_in_any_record": false,
+      "conflicts_with_other_records": []
+    }
+  },
+  "scope": "State of sheet gid=0 at read time; selection is not reserved and sheet was not edited."
+}
