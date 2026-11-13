@@ -1,0 +1,31 @@
+{
+  "classification": {
+    "mode": "raw",
+    "params": {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "max_features": 0.7,
+      "bootstrap": true,
+      "max_samples": null,
+      "oob_score": true,
+      "class_weight": "balanced_subsample"
+    },
+    "estimator": "RandomForestClassifier",
+    "cv_score": 0.7614296439690976
+  },
+  "regression": {
+    "mode": "engineered",
+    "params": {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "max_features": 1.0,
+      "bootstrap": true,
+      "max_samples": null,
+      "oob_score": true
+    },
+    "estimator": "RandomForestRegressor",
+    "cv_score": -3.9970816914802576
+  }
+}

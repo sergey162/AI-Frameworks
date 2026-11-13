@@ -1,0 +1,9 @@
+task,model,unique_fraction,expected_unique_fraction
+classification,sklearn_baseline,0.6320011111111111,0.6321256683238479
+classification,sklearn_improved,0.6320115277777778,0.6321256683238479
+classification,custom_baseline,0.6323336111111112,0.6321256683238479
+classification,custom_improved,0.6321690277777777,0.6321256683238479
+regression,sklearn_baseline,0.6314643304130162,0.6323508913723692
+regression,sklearn_improved,0.6330100125156445,0.6323508913723692
+regression,custom_baseline,0.6282227784730914,0.6323508913723692
+regression,custom_improved,0.6295244055068836,0.6323508913723692

@@ -1,0 +1,16 @@
+task,experiment,delta
+classification,H1 · scaling,-0.00033018019139241517
+classification,H2 · log,-0.00014299554558161454
+classification,H3 · отношения после log,-0.003796462463424244
+classification,"H6 · balanced_subsample − обычные, среднее пар",0.006666363485049641
+classification,H4–H6 · выбранный вариант − baseline,0.0332952840028542
+classification,H7 · all_features,0.018789484174069893
+classification,H7 · bootstrap_70%,0.00031114403109089306
+classification,H7 · no_bootstrap,0.006168929121240452
+regression,H1 · scaling,-0.00922710352249112
+regression,H2 · log,0.0068836671643310865
+regression,H3 · отношения после log,0.7102839291777254
+regression,H4–H6 · выбранный вариант − baseline,0.7402384417581835
+regression,H7 · all_features,0.0
+regression,H7 · bootstrap_70%,-0.1021840431899852
+regression,H7 · no_bootstrap,-0.9147535475866198
