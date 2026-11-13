@@ -1,0 +1,22 @@
+{
+  "classification": {
+    "baseline": {
+      "different_class_fraction": 0.0,
+      "max_probability_difference": 4.440892098500626e-16
+    },
+    "improved": {
+      "different_class_fraction": 0.0,
+      "max_probability_difference": 3.552713678800501e-15
+    }
+  },
+  "regression": {
+    "baseline": {
+      "mean_absolute_prediction_difference": 1.803950732051128e-14,
+      "max_absolute_prediction_difference": 7.105427357601002e-14
+    },
+    "improved": {
+      "mean_absolute_prediction_difference": 4.956552967413903e-14,
+      "max_absolute_prediction_difference": 6.110667527536862e-13
+    }
+  }
+}

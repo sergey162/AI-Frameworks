@@ -51,3 +51,13 @@ def test_validation_and_copy():
     np.testing.assert_allclose(model.predict([[0.]]), [2.])
     with pytest.raises(ValueError):
         model.predict([[0., 1.]])
+
+
+def test_classifier_validation():
+    # Ошибка до fit должна быть совместима с интерфейсом sklearn.
+    for method in ["predict", "predict_proba"]:
+        with pytest.raises(NotFittedError):
+            getattr(KNNClassifier(), method)([[0.]])
+    # Непрерывная цель относится к регрессии и не должна приниматься классификатором.
+    with pytest.raises(ValueError):
+        KNNClassifier(n_neighbors=1).fit([[0.], [1.]], [0.2, 0.7])

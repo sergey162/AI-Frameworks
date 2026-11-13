@@ -2,6 +2,7 @@
 
 import numpy as np
 from sklearn.base import BaseEstimator, ClassifierMixin, RegressorMixin
+from sklearn.utils.multiclass import check_classification_targets
 from sklearn.utils.validation import check_is_fitted, validate_data
 
 
@@ -64,6 +65,7 @@ class _KNNBase(BaseEstimator):
 class KNNClassifier(ClassifierMixin, _KNNBase):
     def fit(self, X, y):
         self._fit(X, y)
+        check_classification_targets(self.y_)
         self.classes_, self.encoded_y_ = np.unique(self.y_, return_inverse=True)
         return self
 
@@ -80,7 +82,8 @@ class KNNClassifier(ClassifierMixin, _KNNBase):
 
     def predict(self, X):
         # np.argmax разрешает равенство голосов в пользу первого класса np.unique.
-        return self.classes_[self.predict_proba(X).argmax(axis=1)]
+        probabilities = self.predict_proba(X)
+        return self.classes_[probabilities.argmax(axis=1)]
 
 
 class KNNRegressor(RegressorMixin, _KNNBase):

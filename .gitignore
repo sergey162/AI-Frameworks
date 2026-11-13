@@ -1,0 +1,10 @@
+# Локальные Python-окружения и служебные файлы
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.jupyter/
+.DS_Store
+lab_*/results/execution.log
