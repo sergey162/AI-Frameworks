@@ -1,0 +1,9 @@
+task,model,depth,leaves,nodes,train_score
+classification,sklearn_baseline,33,2861,5721,1.0
+regression,sklearn_baseline,24,784,1567,0.06656839619845291
+classification,sklearn_improved,21,527,1053,0.8043710021321961
+regression,sklearn_improved,12,551,1101,0.51744759169138
+classification,custom_baseline,33,2859,5717,1.0
+regression,custom_baseline,24,781,1561,0.06656839619845302
+classification,custom_improved,21,526,1051,0.8043710021321961
+regression,custom_improved,12,551,1101,0.5174475916913802

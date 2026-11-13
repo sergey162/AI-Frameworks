@@ -1,0 +1,100 @@
+{
+  "lab": 3,
+  "seed": 42,
+  "cv_folds": 3,
+  "selected": {
+    "classification": {
+      "mode": "raw",
+      "params": {
+        "max_depth": null,
+        "min_samples_leaf": 20,
+        "class_weight": null
+      },
+      "estimator": "DecisionTreeClassifier",
+      "cv_score": 0.7268580480205739
+    },
+    "regression": {
+      "mode": "engineered",
+      "params": {
+        "max_depth": 12,
+        "min_samples_leaf": 1
+      },
+      "estimator": "DecisionTreeRegressor",
+      "cv_score": -5.254231287672696
+    }
+  },
+  "selection": "joint full-train CV of representations and hyperparameters; test reporting only",
+  "classification_threshold": 0.5,
+  "classification_tie": "first class (0)",
+  "criteria": {
+    "classification": "gini",
+    "regression": "squared_error"
+  },
+  "datasets": {
+    "classification": {
+      "name": "Loan Approval Classification Data",
+      "file": "loan_data.csv",
+      "target": "loan_status",
+      "dataset_sha": "67cca604cd71cbd605014f721d078d20d44d726d625945591450733535f9868a",
+      "split_sha": "7b361ef3c2f6064122c71a7ef24d5d1665daf47a3d17fc0131f608b2f287811c",
+      "split_file": "split_classification.csv",
+      "protocol_id": "loan-v1-seed42-test20",
+      "excluded": [
+        "loan_status",
+        "loan_int_rate"
+      ],
+      "features": [
+        "person_age",
+        "person_gender",
+        "person_education",
+        "person_income",
+        "person_emp_exp",
+        "person_home_ownership",
+        "loan_amnt",
+        "loan_intent",
+        "loan_percent_income",
+        "cb_person_cred_hist_length",
+        "credit_score",
+        "previous_loan_defaults_on_file"
+      ],
+      "duplicates_removed": 0,
+      "n_train": 36000,
+      "n_test": 9000,
+      "holdout": "stratified rows 20%",
+      "cv": "StratifiedKFold(3)"
+    },
+    "regression": {
+      "name": "Concrete Compressive Strength",
+      "file": "Concrete_Data.xls",
+      "target": "strength",
+      "dataset_sha": "710076c66b9ca3f8050e7942f3dcbdbe04013534daeb0077ffd3079a52d8e0c4",
+      "split_sha": "d91bd7e186c5164a58c7d569eb2e616e9a5cfcf03e6677a426135e5edbd9dd50",
+      "split_file": "split_regression.csv",
+      "protocol_id": "concrete-v1-recipe-groups-seed42-test20",
+      "excluded": [
+        "strength"
+      ],
+      "features": [
+        "cement",
+        "slag",
+        "fly_ash",
+        "water",
+        "superplasticizer",
+        "coarse_aggregate",
+        "fine_aggregate",
+        "age"
+      ],
+      "duplicates_removed": 25,
+      "n_train": 799,
+      "n_test": 206,
+      "holdout": "20% recipe groups, age excluded from group key",
+      "cv": "GroupKFold(3), recipe groups"
+    }
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1"
+  }
+}

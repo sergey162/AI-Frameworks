@@ -24,7 +24,7 @@ def execute(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--labs", nargs="+", choices=[1, 2], type=int, default=[1, 2])
+    parser.add_argument("--labs", nargs="+", choices=[1, 2, 3], type=int, default=[1, 2, 3])
     args = parser.parse_args()
     root = Path(__file__).resolve().parent
     for name, value in {"JUPYTER_RUNTIME_DIR": "/tmp/vkr_jupyter_runtime",
@@ -32,7 +32,8 @@ def main():
         os.environ.setdefault(name, value)
     for name in ["OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"]:
         os.environ[name] = "1"
-    paths = {1: root / "lab_1" / "knn_research.ipynb", 2: root / "lab_2" / "linear_research.ipynb"}
+    paths = {1: root / "lab_1" / "knn_research.ipynb", 2: root / "lab_2" / "linear_research.ipynb",
+             3: root / "lab_3" / "decision_tree_research.ipynb"}
     for number in sorted(set(args.labs)):
         execute(paths[number])
     execute(root / "comparison.ipynb")

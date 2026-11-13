@@ -1,0 +1,21 @@
+{
+  "classification": {
+    "mode": "raw",
+    "params": {
+      "max_depth": null,
+      "min_samples_leaf": 20,
+      "class_weight": null
+    },
+    "estimator": "DecisionTreeClassifier",
+    "cv_score": 0.7268580480205739
+  },
+  "regression": {
+    "mode": "engineered",
+    "params": {
+      "max_depth": 12,
+      "min_samples_leaf": 1
+    },
+    "estimator": "DecisionTreeRegressor",
+    "cv_score": -5.254231287672696
+  }
+}
