@@ -1,0 +1,9 @@
+task,model,n_estimators,depth_mean,total_nodes,train_score
+classification,sklearn_baseline,100,3.0,1406,0.7368421052631579
+regression,sklearn_baseline,100,3.0,1476,2.7116574813430474
+classification,sklearn_improved,200,3.0,2864,0.787350802579229
+regression,sklearn_improved,200,3.0,2738,1.6066748932188988
+classification,custom_baseline,100,3.0,1392,0.7368421052631579
+regression,custom_baseline,100,3.0,1476,2.7116574813430474
+classification,custom_improved,200,3.0,2852,0.787350802579229
+regression,custom_improved,200,3.0,2738,1.6066748932188986

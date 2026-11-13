@@ -1,0 +1,5 @@
+task,stage,n_estimators,subsample,rows_min,rows_max,all_rows_unique,train_loss_first,train_loss_last,loss_increases
+classification,baseline,100,1.0,36000,36000,True,0.48372298707615713,0.2107757462946965,0
+classification,improved,200,1.0,36000,36000,True,0.4627351612566761,0.18520860007274562,0
+regression,baseline,100,1.0,799,799,True,221.83193311988066,12.733577537630392,0
+regression,improved,200,1.0,799,799,True,200.74040748124693,5.398312614667544,0

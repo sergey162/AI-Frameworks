@@ -24,7 +24,8 @@ def execute(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--labs", nargs="+", choices=[1, 2, 3, 4], type=int, default=[1, 2, 3, 4])
+    parser.add_argument("--labs", nargs="+", choices=[1, 2, 3, 4, 5], type=int, default=[1, 2, 3, 4, 5])
+    parser.add_argument("--comparison-only", action="store_true", help="Обновить только итоговый notebook по сохранённым метрикам")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent
     for name, value in {"JUPYTER_RUNTIME_DIR": "/tmp/vkr_jupyter_runtime",
@@ -34,8 +35,9 @@ def main():
         os.environ[name] = "1"
     paths = {1: root / "lab_1" / "knn_research.ipynb", 2: root / "lab_2" / "linear_research.ipynb",
              3: root / "lab_3" / "decision_tree_research.ipynb",
-             4: root / "lab_4" / "random_forest_research.ipynb"}
-    for number in sorted(set(args.labs)):
+             4: root / "lab_4" / "random_forest_research.ipynb",
+             5: root / "lab_5" / "gradient_boosting_research.ipynb"}
+    for number in ([] if args.comparison_only else sorted(set(args.labs))):
         execute(paths[number])
     execute(root / "comparison.ipynb")
 

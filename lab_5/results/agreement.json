@@ -1,0 +1,30 @@
+[
+  {
+    "task": "classification",
+    "stage": "baseline",
+    "mean_abs_prediction_difference": 0.0,
+    "max_abs_prediction_difference": 0.0,
+    "disagreement": 0.0,
+    "mean_abs_probability_difference": 4.051519367026468e-08
+  },
+  {
+    "task": "classification",
+    "stage": "improved",
+    "mean_abs_prediction_difference": 0.0,
+    "max_abs_prediction_difference": 0.0,
+    "disagreement": 0.0,
+    "mean_abs_probability_difference": 1.7322703556238324e-17
+  },
+  {
+    "task": "regression",
+    "stage": "baseline",
+    "mean_abs_prediction_difference": 0.014274859393283438,
+    "max_abs_prediction_difference": 0.8635281153249537
+  },
+  {
+    "task": "regression",
+    "stage": "improved",
+    "mean_abs_prediction_difference": 0.04388524492924986,
+    "max_abs_prediction_difference": 1.0733311591612065
+  }
+]

@@ -1,0 +1,19 @@
+task,experiment,delta
+classification,H1 · scaled − raw,0.0
+classification,H2 · log − raw,0.0
+classification,H3 · engineered − log,0.0003831407899896888
+classification,H4 · η=0.15 − 0.05,0.0659356097750421
+classification,H5 · depth=3 − 2,0.02500465754042992
+classification,H7 · subsample=0.7 − 1,0.0033626781624559814
+classification,H6 · leaf=5 − 1,-0.00021570564768236267
+classification,H6 · leaf=15 − 1,-0.0004631759090329979
+classification,Выбранный вариант − baseline,0.035921619465892896
+regression,H1 · scaled − raw,-0.019916452931007633
+regression,H2 · log − raw,0.00016344777222077056
+regression,H3 · engineered − log,0.5340197024847111
+regression,H4 · η=0.15 − 0.05,1.2288590616369506
+regression,H5 · depth=3 − 2,0.5585091251280636
+regression,H7 · subsample=0.7 − 1,0.03904620134285236
+regression,H6 · leaf=3 − 1,0.06053001950032666
+regression,H6 · leaf=10 − 1,0.053610411244328304
+regression,Выбранный вариант − baseline,0.8011292208886882

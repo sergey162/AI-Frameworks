@@ -1,0 +1,168 @@
+{
+  "lab": 5,
+  "seed": 42,
+  "cv_folds": 3,
+  "baseline": {
+    "classification": {
+      "n_estimators": 100,
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "min_samples_leaf": 1,
+      "subsample": 1.0
+    },
+    "regression": {
+      "n_estimators": 100,
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "min_samples_leaf": 1,
+      "subsample": 1.0
+    }
+  },
+  "selected": {
+    "classification": {
+      "mode": "engineered",
+      "params": {
+        "n_estimators": 200,
+        "learning_rate": 0.15,
+        "max_depth": 3,
+        "min_samples_leaf": 5,
+        "subsample": 1.0
+      },
+      "cv_score": 0.7646453658779278,
+      "cv_std": 0.00884947874764953,
+      "folds": [
+        0.7521331945889699,
+        0.7706688824262568,
+        0.7711340206185567
+      ],
+      "source": "trajectory"
+    },
+    "regression": {
+      "mode": "engineered",
+      "params": {
+        "n_estimators": 200,
+        "learning_rate": 0.15,
+        "max_depth": 3,
+        "min_samples_leaf": 3,
+        "subsample": 1.0
+      },
+      "cv_score": -3.8671108750406997,
+      "cv_std": 0.12765174933152526,
+      "folds": [
+        -4.039014470842999,
+        -3.733416863389268,
+        -3.8289012908898323
+      ],
+      "source": "trajectory"
+    }
+  },
+  "classification_threshold": 0.5,
+  "classification_tie": "class 0",
+  "losses": {
+    "classification": "binary log-loss with Newton leaf update",
+    "regression": "half squared error; report MSE"
+  },
+  "search": {
+    "modes": [
+      "raw",
+      "engineered"
+    ],
+    "learning_rate": [
+      0.05,
+      0.15
+    ],
+    "max_depth": [
+      2,
+      3
+    ],
+    "subsample": [
+      0.7,
+      1.0
+    ],
+    "stages": [
+      25,
+      50,
+      100,
+      200
+    ],
+    "trajectories_per_task": 17,
+    "additional": "baseline representations and isolated leaf sizes",
+    "selection": "max mean train-CV score; ties: fewer trees, smaller depth, candidate order",
+    "internal_early_stopping": false,
+    "all_training_rows": true
+  },
+  "custom": "own NumPy CART from lab_3; deterministic feature ties; NumPy default_rng; sampling without replacement",
+  "seed_robustness": [
+    7,
+    21,
+    42
+  ],
+  "paired_bootstrap_repeats": 500,
+  "datasets": {
+    "classification": {
+      "name": "Loan Approval Classification Data",
+      "file": "loan_data.csv",
+      "target": "loan_status",
+      "dataset_sha": "67cca604cd71cbd605014f721d078d20d44d726d625945591450733535f9868a",
+      "split_sha": "7b361ef3c2f6064122c71a7ef24d5d1665daf47a3d17fc0131f608b2f287811c",
+      "split_file": "split_classification.csv",
+      "protocol_id": "loan-v1-seed42-test20",
+      "excluded": [
+        "loan_status",
+        "loan_int_rate"
+      ],
+      "features": [
+        "person_age",
+        "person_gender",
+        "person_education",
+        "person_income",
+        "person_emp_exp",
+        "person_home_ownership",
+        "loan_amnt",
+        "loan_intent",
+        "loan_percent_income",
+        "cb_person_cred_hist_length",
+        "credit_score",
+        "previous_loan_defaults_on_file"
+      ],
+      "duplicates_removed": 0,
+      "n_train": 36000,
+      "n_test": 9000,
+      "holdout": "stratified rows 20%",
+      "cv": "StratifiedKFold(3)"
+    },
+    "regression": {
+      "name": "Concrete Compressive Strength",
+      "file": "Concrete_Data.xls",
+      "target": "strength",
+      "dataset_sha": "710076c66b9ca3f8050e7942f3dcbdbe04013534daeb0077ffd3079a52d8e0c4",
+      "split_sha": "d91bd7e186c5164a58c7d569eb2e616e9a5cfcf03e6677a426135e5edbd9dd50",
+      "split_file": "split_regression.csv",
+      "protocol_id": "concrete-v1-recipe-groups-seed42-test20",
+      "excluded": [
+        "strength"
+      ],
+      "features": [
+        "cement",
+        "slag",
+        "fly_ash",
+        "water",
+        "superplasticizer",
+        "coarse_aggregate",
+        "fine_aggregate",
+        "age"
+      ],
+      "duplicates_removed": 25,
+      "n_train": 799,
+      "n_test": 206,
+      "holdout": "20% recipe groups, age excluded from group key",
+      "cv": "GroupKFold(3), recipe groups"
+    }
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1"
+  }
+}
